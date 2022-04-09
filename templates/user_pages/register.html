@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.user_id.label }}
+        {{ form.user_id() }}
+        {% for error in form.user_id.errors %}
+            {{ error }}
+        {% endfor %}
+        <br><br>
+        {{ form.hidden_tag() }}
+        {{ form.password.label }}
+        {{ form.password() }}
+        {% for error in form.password.errors %}
+            {{ error }}
+        {% endfor %}
+        <br><br>
+        {{ form.hidden_tag() }}
+        {{ form.confirm_password.label }}
+        {{ form.confirm_password() }}
+        {% for error in form.confirm_password.errors %}
+            {{ error }}
+        {% endfor %}
+        <br><br>
+        {{ form.submit() }}
+    </form>
+
+    <h3>Already registered? <button><a href="{{ url_for('login') }}"><b>LOGIN HERE</b></a></button></h3>
+    
+{% endblock %}

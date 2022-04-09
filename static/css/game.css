@@ -1,0 +1,152 @@
+@font-face {
+    font-family: Source Sans Pro;
+    src: local("Source Sans Pro Medium"), url("{{ url_for('static', filename = 'fonts/SourceSansPro-Medium.ttf' }}") format("truetype");
+    font-weight: regular;
+}
+@viewport {
+    width: device-width;
+}
+:root {
+    font-family: 'Source Sans Pro Medium', sans-serif;
+    --font-size: 16px;
+    --link-color: #2aafd8;
+    --bg-color: #6e6e6e;
+    --bg-color2: #5e5e5e;
+    --bg-color3: #8e8e8e;
+    --hover-color: #ffffff90;
+    --base-border: 1px solid black;
+    --border-radius: .2rem;
+    --base-text-shadow: 0 0 2px black;
+}
+html {
+    background-color: gray;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+canvas {
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+}
+p {
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    overflow: auto;
+    justify-content: center;
+}
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    text-shadow: var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow);
+}
+h3 {
+    color: red;
+    text-shadow: var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow);
+}
+b {
+    color: white;
+    text-shadow: var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow);
+}
+a {
+    text-decoration: none;
+}
+button:hover {
+    cursor: pointer;
+}
+#toggle-mute {
+    background-color: green;
+}
+#intro {
+    width: 60%;
+    margin: 0 auto;
+}
+nav li:hover, button:hover, input[type=submit]:hover {
+    background-color: var(--hover-color);
+    border-left: var(--base-border);
+    border-right: var(--base-border);
+}
+ul {
+    border: var(--base-border);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+}
+.btns, .game-btns {
+    text-align: center;
+}
+button {
+    background-color: var(--bg-color);
+    border: var(--base-border);
+    border-radius: var(--border-radius);
+    padding: .5em;
+    margin: .5em;
+    text-align: center;
+}
+.game-btns a {
+    font-size: 3em;
+    padding: 0.5em;
+}
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow);
+}
+h3 {
+    text-align: center;
+}
+footer {
+    text-align: center;
+    width: 100%;
+}
+footer a {
+    padding: 0;
+    display: inline-block;
+}
+table {
+    width: 50%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    border: var(--base-border);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+}
+td, th {
+    border: var(--base-border);
+    padding: 0.5em;
+    overflow: auto;
+}
+form {
+    width: 35%;
+    margin: 0 auto;
+}
+input[type=text], input[type=number], input[type=password], select {
+    width: 100%;
+    padding: 8px 8px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: var(--base-border);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+}
+input[type=submit] {
+    font-size: 2em;
+    width: 100%;
+    background-color: var(--bg-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: var(--base-border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow), var(--base-text-shadow);
+}

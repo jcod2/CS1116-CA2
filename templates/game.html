@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block js_script %}
+<!-- will not run without "type="text/javascript" in the script tag -->
+<!-- has only been an issue since moving to flask -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/game.js') }}" type="module"></script>
+{% endblock %} {% block main_content %}
+
+<body>
+	<canvas width="960" height="640"></canvas>
+	<section class="btns">
+		<button>
+			<a href="{{ url_for('game') }}"><b>RESET</b></a>
+		</button>
+		<button id="toggle-mute"><b>TOGGLE MUTE</b></button>
+		{% if g.user %}
+		<section id="save-score"></section>
+		{% endif %}
+	</section>
+	{% endblock %}
+</body>

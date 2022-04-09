@@ -1,0 +1,8 @@
+.DS_Store
+**/*.__wz_cache
+**/*.mp4
+.vscode/
+__pycache__/
+test_files/
+util/
+assets/

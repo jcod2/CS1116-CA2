@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.user_id.label }}
+        {{ form.user_id() }}
+        {% for error in form.user_id.errors %}
+            {{ error }}
+        {% endfor %}
+        <br><br>
+        {{ form.hidden_tag() }}
+        {{ form.password.label }}
+        {{ form.password() }}
+        {% for error in form.password.errors %}
+            {{ error }}
+        {% endfor %}
+        <br><br>
+        {{ form.submit() }}
+    </form>
+
+    <h3>Not registered? <button><a href="{{ url_for('register') }}"><b>Register HERE</b></a></button></h3>
+
+{% endblock %}

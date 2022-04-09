@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% block main_content %}
+<section id="intro">
+	<h1>{{ title }}</h1>
+	<h3>YOU MUST FIRST REGISTER AND LOGIN IF YOU WANT TO SAVE YOUR SCORE!</h3>
+    <p>
+        The
+		<b>Player</b>
+		<img src="{{ url_for('static', filename='images/player.png') }}" alt="" /> can be moved with the <b>Arrow Keys</b> or with the 
+        <b>WASD</b> keys.
+    </p>
+	<p>
+		The aim of the game is avoid the <b>Crabs</b
+		><img src="{{ url_for('static', filename='images/crab.png') }}" alt="" /> chasing the <b>Player</b>
+		<img src="{{ url_for('static', filename='images/player.png') }}" alt="" /> while also trying to kite the
+		<b>Crabs</b> <img src="{{ url_for('static', filename='images/crab.png') }}" alt="" /> so that they end up
+		colliding with one of the <b>Obstacles</b>
+		<img src="{{ url_for('static', filename='images/obstacle.png') }}" alt="" /> as the <b>Crabs</b
+		><img src="{{ url_for('static', filename='images/crab.png') }}" alt="" /> are very <b>brittle</b> and die
+		easily. The
+		<b>Player</b>
+		<img src="{{ url_for('static', filename='images/player.png') }}" alt="" /> gains score with each destroyed
+		<b>Crab</b> <img src="{{ url_for('static', filename='images/crab.png') }}" alt="" />.
+	</p>
+	<p>
+		The <b>Player</b> <img src="{{ url_for('static', filename='images/player.png') }}" alt="" /> will die if they
+		make any contact with a <b>Crab</b> <img src="{{ url_for('static', filename='images/crab.png') }}" alt="" /> or
+		if the player makes any contact with the <b>Water</b>
+		<img src="{{ url_for('static', filename='images/water.png') }}" alt="" />. <b>Crabs</b>
+		<img src="{{ url_for('static', filename='images/crab.png') }}" alt="" /> can freely traverse the <b>Water</b>
+		<img src="{{ url_for('static', filename='images/water.png') }}" alt="" /> unlike the player.
+	</p>
+	<p>
+		Periodically <b>Bombs</b> <img src="{{ url_for('static', filename='images/bomb.png') }}" alt="" /> will spawn
+		and if the <b>Player</b> <img src="{{ url_for('static', filename='images/player.png') }}" alt="" /> makes
+		contact with them, all <b>Crabs</b>
+		<img src="{{ url_for('static', filename='images/crab.png') }}" alt="" /> currently on screen will be removed and
+		the players score will incremented accordingly.
+	</p>
+	<p>
+		Upon achieving a score of <b>50</b> the game will end as the <b>Player</b
+		><img src="{{ url_for('static', filename='images/player.png') }}" alt="" /> has one. Given the existence of
+		<b>Bombs</b> <img src="{{ url_for('static', filename='images/bomb.png') }}" alt="" />, it is possible to end the
+		game with a score of above <b>50</b> if the <b>Player</b
+		><img src="{{ url_for('static', filename='images/player.png') }}" alt="" /> uses a <b>Bomb</b>
+		<img src="{{ url_for('static', filename='images/bomb.png') }}" alt="" /> while at 49 and there are more than 1
+		<b>Crabs</b> <img src="{{ url_for('static', filename='images/crab.png') }}" alt="" />
+		present at that time.
+	</p>
+	<p>Logged in users can save their score to the <b>leaderboard</b>.</p>
+	<section class="btns">
+		<button>
+			<a href="{{ url_for('game') }}"><b>PLAY!</b></a>
+		</button>
+	</section>
+</section>
+{% endblock %}

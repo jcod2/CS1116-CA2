@@ -1,4 +1,3 @@
-from email import message
 from flask import Flask, redirect, render_template, url_for, session, request, g
 from database import get_db, close_db
 from sqlite3 import IntegrityError

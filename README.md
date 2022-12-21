@@ -1,4 +1,4 @@
 # js_flask_canvas_game
-Canvas Game
+Continuous Assignment 2 for cs1116
 
 Canvas Game made with JS with some AJAX implemnetation.

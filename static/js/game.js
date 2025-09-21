@@ -1,9 +1,3 @@
-/*
-have just commented out any code i decided to not use or ended implementing in another way
-such as changing how enemies spawn from random point on the canvas to a specific spawn boxes 
-on the left/right/bottom of the screen
- */
-
 let canvas, context, request_id, xhttp;
 // for fps throttle
 let fpsInterval = 1000 / 30,
